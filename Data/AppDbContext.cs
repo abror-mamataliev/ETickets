@@ -16,7 +16,7 @@ namespace ETickets.Data
             });
 
             modelBuilder.Entity<ActorMovie>().HasOne(am => am.Movie).WithMany(m => m.ActorsMovies).HasForeignKey(am => am.MovieId);
-            modelBuilder.Entity<ActorMovie>().HasOne(am => am.Actor).WithMany(a => a.ActorsMovies).HasForeignKey(am => am.MovieId);
+            modelBuilder.Entity<ActorMovie>().HasOne(am => am.Actor).WithMany(a => a.ActorsMovies).HasForeignKey(am => am.ActorId);
 
             base.OnModelCreating(modelBuilder);
         }
