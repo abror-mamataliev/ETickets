@@ -16,7 +16,7 @@ namespace ETickets.Controllers
         public async Task<IActionResult> Index()
         {
             List<Actor> allActors = await _context.Actors.ToListAsync();
-            return View();
+            return View(allActors);
         }
     }
 }
